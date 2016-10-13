@@ -179,7 +179,12 @@ controller.hears(['uptime', 'identify yourself', 'who are you', 'what is your na
             ':robot_face: I am a bot named <@' + bot.identity.name +
              '>. I have been running for ' + uptime + ' on ' + hostname + '.');
 
-    });
+});
+
+controller.hears(['membership', 'how to join', 'how do I join'],
+  'direct_message,direct_mention,mention,ambient', function(bot, message) {
+    bot.reply(message, 'Make it rain, bitch')
+  })
 
 function formatUptime(uptime) {
     var unit = 'second';
