@@ -1,0 +1,13 @@
+{
+  "name": "techsochq-bot",
+  "version": "1.0.0",
+  "description": "A slack bot for techsochq",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "beepboop-botkit": "^1.4.0",
+    "botkit": "~0.1.1"
+  }
+}
