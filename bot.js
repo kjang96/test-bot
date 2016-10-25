@@ -1,12 +1,21 @@
 var Botkit = require('botkit')
-
 var token = process.env.SLACK_TOKEN
-
 var controller = Botkit.slackbot({
   // reconnect to Slack RTM when connection goes bad
   retry: Infinity,
   debug: false
 })
+
+/***** Instead of adding code for the controller instance on botjs, make a new file in /extensions and then import it using require.
+
+You can then pass the controller instance into the variable as shown.
+
+See example below!
+******/ 
+
+var kathy = require('./extensions/kathy.js')
+
+kathy(controller);
 
 // Assume single team mode if we have a SLACK_TOKEN
 if (token) {
